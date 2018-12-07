@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: #8bbee5;
+}
+
+button {
+    display: inline-block;
+    margin: 20px 30px;
+    padding: 15px 50px;
+    min-width: 160px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 36px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-size: 300%;
+    background-color: #286ee0;
+}
+
+button:hover {
+    color: #c4d4ed;
+}
+
+.game {
+    background-color: #26006d;
+    margin-bottom: 50px;
+    color: #55abed;
+}
