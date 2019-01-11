@@ -1,44 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Rock, Paper, Scissors Simple Game</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-  
+
 </head>
 
 <body>
 
-  <h1>Rock, Paper, Scissors Simple Game</h1>
-<h2> Rules: Rock beats Scissors, Scissors beats Paper, Paper beats Rock</h2>
-<h3> Please click the NEW GAME button to start a game<h3>
+  <div class="head">
+    <h1>Rock, Paper, Scissors Simple Game</h1>
+  </div>
+  <div class="rules">
+    <h2> Rules: Rock beats Scissors, Scissors beats Paper, Paper beats Rock</h2>
+  </div>
+  <div class="instruction">
+    <h3> Please click the NEW GAME button to start a game</h3>
+  </div>
 
-<div>
-  <button id="newGame" class="game">NEW GAME</button>
-</div>
-<div id="numberLimit"></div>
+  <div>
+    <button id="newGame" class="game">NEW GAME</button>
+  </div>
+  <div id="numberLimit"></div>
 
-<div id="buttons">
-<button id="paperBtn">Paper</button>
-<button id="rockBtn">Rock</button>
-<button id="scissorsBtn">Scissors</button>
-</div><br>
+  <div class="buttons">
+    <button id="paperBtn">Paper</button>
+    <button id="rockBtn">Rock</button>
+    <button id="scissorsBtn">Scissors</button>
+  </div><br>
 
-<div id="output"></div><br>
-<div id="result"></div><br>
-<div id="gameResult"></div><br>
-  
-  
+  <div id="output"></div><br>
+  <div id="result"></div><br>
+  <div id="gameResult"></div><br>
 
-    <script  src="js/index.js"></script>
-
-
-
+  <div id="roundsModal" class="modal">
+    <button class="hide_modal">x</button>
+    <div class="modal_body"></div>
+  </div>
+  <footer>
+    <h6>
+      Copyright 2019 Anna Strzała
+    </h6>
+  </footer>
+  <script src="js/index.js"></script>
 
 </body>
 

@@ -1,36 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
 body {
+    font-family: 'Righteous', cursive;
     text-align: center;
-    margin-top: 50px;
+
+    background: linear-gradient(rgb(52, 146, 8), rgb(151, 226, 170)) fixed;
 }
 
-h1 {
-    color: blue;
+.head {
+    padding: 30px;
+    margin-bottom: 30px;
+
+    h1 {
+        color: rgb(30, 54, 2);
+        text-shadow: 2px 2px #cec8c8;
+    }
 }
 
-h2 {
-    color: #8bbee5;
+.rules {
+    padding: 40px;
+    border: 4px rgb(141, 184, 151) solid;
+    border-radius: 50px;
+    background-color: #5d9658;
+    max-width: 30%;
+    max-height: auto;
+
+    h2 {
+        color: #2cc96d;
+        text-shadow: 2px 2px #040e03;
+    }
+}
+
+.instruction {
+    padding: 40px;
 }
 
 button {
     display: inline-block;
-    margin: 20px 30px;
+    margin: 30px 30px;
     padding: 15px 50px;
-    min-width: 160px;
+    min-width: 260px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 36px;
     cursor: pointer;
     transition: 0.5s;
-    background-size: 300%;
-    background-color: #286ee0;
-}
+    background-size: 100%;
+    background-color: #15fc00;
 
-button:hover {
-    color: #c4d4ed;
+    &:hover {
+        color: #c4d4ed;
+    }
 }
 
 .game {
-    background-color: #26006d;
+    background-color: #082906;
     margin-bottom: 50px;
-    color: #55abed;
+    color: #2ce20b;
+}
+
+.hide_modal {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    top: 300px;
+    right: 600px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    .modal_body {
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        padding: 30px;
+    }
 }
