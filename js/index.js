@@ -3,6 +3,8 @@
 var params = {
   playersWin: 0,
   computersWin: 0,
+  playerChoice: '',
+  computerChoice: '',
   rounds: 0,
   roundResults: []
 }
@@ -38,6 +40,8 @@ function randomNumber() {
 function playerMove(playerChoice) {
 
   var computerChoice = randomNumber();
+  params.computerChoice = computerChoice;
+  params.playerChoice = playerChoice;
   if (playerChoice === computerChoice) {
     output.innerHTML = 'It is a tie! You played: ' + playerChoice + ' - Computer played: ' + computerChoice;
   } else if (
@@ -71,7 +75,9 @@ function saveRoundResult() {
   params.roundResults.push({
     playerScore: params.playersWin,
     computerScore: params.computersWin,
-    score: params.playersWin + ':' + params.computersWin
+    score: params.playersWin + ':' + params.computersWin,
+    playerChoice: params.playerChoice,
+    computerChoice: params.computerChoice
   });
 }
 
@@ -82,7 +88,7 @@ function gameOver() {
     disableButton(true);
     generateResultsTable();
   } else if (params.computersWin === params.rounds) {
-    gameResult.innerHTML = 'GAME OVER';
+    gameResult.innerHTML = '<h1>YOU LOST! GAME OVER</h1>';
     disableButton(true);
     generateResultsTable();
   }
@@ -103,6 +109,7 @@ newGame.addEventListener('click', function () {
   result.innerHTML = '';
   gameResult.innerHTML = '';
   output.innerHTML = '';
+  params.roundResults = []
 });
 
 disableButton(true)
@@ -111,22 +118,15 @@ function generateResultsTable() {
 
   var tbody = '';
   for (var i = 0; i < params.roundResults.length; i++) {
-    tbody += `<tr><td>${i+1}</td><td>${params.roundResults[i].playerScore}</td><td>${params.roundResults[i].computerScore}</td><td>${params.roundResults[i].score}</td></tr>`;
+    var elem = params.roundResults[i];
+    tbody += `<tr><td>${i+1}</td><td>${elem.playerChoice}</td><td>${elem.computerChoice}</td><td>${elem.playerScore}</td><td>${elem.computerScore}</td><td>${elem.score}</td></tr>`;
   }
 
-  var table = `
-    <table>
-      <thead><th>ID</th><th>Player points</th><th>Computer points</th><th>Round score</th></thead>
-      <tbody>
-        ${tbody}
-      </tbody>
-    </table>
-  `;
-
-  roundsModal.querySelector(".modal_body").innerHTML = table;
+  roundsModal.querySelector(".modal_body tbody").innerHTML = tbody;
   roundsModal.style.display = "flex";
 }
 
 hideModalbtn.addEventListener("click", function () {
   roundsModal.style.display = "none";
+
 });
