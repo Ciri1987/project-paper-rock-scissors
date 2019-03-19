@@ -1,3 +1,3 @@
-# paper-rock-scissors
-Simple game
-https://ciri1987.github.io/paper-rock-scissors/
+Simple common game wrote in vanilla JS
+
+https://ciri1987.github.io/project-paper-rock-scissors/
