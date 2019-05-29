@@ -26,7 +26,7 @@
   "dependencies": {},
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "globstar": "^1.0.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.9.4",
